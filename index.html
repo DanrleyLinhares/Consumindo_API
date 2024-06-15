@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DncWeather</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Cabeçalho -->
+    <div id="header">
+        <div id="dncweather">
+            <p>DncWeather</p>
+        </div>
+        <div id="endereço">
+            <p>Endereços</p>
+        </div>
+        <div id="tempo">
+            <p>Previsão do tempo</p>
+        </div>
+    </div>
+
+    <!-- Descrição -->
+    <div id="textcloud">
+        <div id="text">
+            Descubra Mais com Precisão: <br>
+            Previsões do Tempo e endereços <br> 
+            em tempo real.
+        </div>
+        <div id="cloud">
+            <img src="Imagens/cloudSun.svg" alt="ERROR">
+        </div>
+    </div>
+
+    <!-- Formulario -->
+    <section>
+        <div id="form">
+            <ul>
+                <p>
+                    Primeiro Nome: <br>
+                    <input class="inputform" type="text" placeholder="Insira seu primeiro nome:" required id="primeiroNome">
+                    <span class="error" id="nomeError"></span>
+                </p>
+                <p>
+                    E-mail:<br>
+                    <input type="email" placeholder="Insira seu e-mail" required id="email">
+                    <span class="error" id="emailError"></span>
+                </p>
+                <p>
+                    Digite o CEP: <br>
+                    <input type="text" placeholder="Insira o CEP" required id="cep" pattern="\d{8}">
+                    <span class="error" id="cepError"></span>
+                </p>
+                <p>
+                    Digite a latitude e longitude para saber a previsão: <br>
+                    &nbsp; <input class="form" type="text" placeholder="Latitude" required id="latitude" pattern="-?\d+(\.\d+)?"> 
+                    &nbsp; <input class="form" type="text" placeholder="Longitude" required id="longitude" pattern="-?\d+(\.\d+)?">
+                    <span class="error" id="coordsError"></span>
+                </p>
+                <button type="button" id="botaoConsulta">Acessar</button>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Texto Busca por CEP -->
+    <div class="textlocation">
+        <div class="textCep">
+            Resultado da busca por CEP:
+        </div>
+        <div class="location">
+            <img src="Imagens/location.svg" width="136px" alt="ERROR">
+        </div>
+    </div>
+
+    <!-- Resultado da busca por CEP -->
+    <div id="buscaCep">
+        <div id="names">
+            <p>Logradouro/nome</p>
+            <p>Bairro/Distrito</p>
+            <p>Localidade/UF</p>
+        </div>
+        <div id="functions">
+            <p id="logradouro">Justino Cobra</p>
+            <p id="bairro">Vila Ema</p>
+            <p id="localidade">SP</p>
+        </div>
+    </div>
+
+    <!-- Texto Previsão do tempo -->
+    <div class="textlocation">
+        <div class="textCep">
+            Previsão do tempo na região:
+        </div>
+        <div class="location">
+            <img src="Imagens/cloud.svg" alt="ERROR">
+        </div>
+    </div>
+
+    <!-- Resultado da previsão do tempo -->
+    <div id="temp">
+        <p>Previsão de tempo de acordo com a região: <span id="temperature">24</span>° C</p>
+    </div>
+
+    <!-- Rodapé da pagina -->
+    <div id="bottom">
+        <p>Termos de Uso | Política de Privacidade</p>
+    </div>
+
+    <script src="script.js"></script>
+
+    <!-- Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>
